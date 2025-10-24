@@ -8,47 +8,45 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Jairus Joer",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "jairusjoer.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
+      fontOrigin: "local",
+      cdnCaching: false,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "JetBrainsMono Nerd Font",
+        body: "JetBrainsMono Nerd Font",
+        code: "JetBrainsMono Nerd Font",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#eff1f5", // base
+          lightgray: "#e6e9ef", // mantle
+          gray: "#acb0be", // surface2
+          darkgray: "#5c5f77", // subtext1
+          dark: "#4c4f69", // text
+          secondary: "#1e66f5", // blue
+          tertiary: "#7287fd", // lavender
+          highlight: "rgba(114, 135, 253, 0.15)", // lavender with transparency
+          textHighlight: "#df8e1d88", // yellow with transparency
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#1e1e2e", // base
+          lightgray: "#313244", // surface0
+          gray: "#585b70", // surface2
+          darkgray: "#bac2de", // subtext1
+          dark: "#cdd6f4", // text
+          secondary: "#89b4fa", // blue
+          tertiary: "#b4befe", // lavender
+          highlight: "rgba(180, 190, 254, 0.15)", // lavender with transparency
+          textHighlight: "#f9e2af88", // yellow with transparency
         },
       },
     },
@@ -61,8 +59,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "catppuccin-latte",
+          dark: "catppuccin-mocha",
         },
         keepBackground: false,
       }),
@@ -89,7 +87,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }
