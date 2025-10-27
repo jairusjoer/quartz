@@ -23,6 +23,7 @@ button.toc-header {
 
   & h3 {
     font-size: 1rem;
+    line-height: 2rem;
     display: inline-block;
     margin: 0;
   }
@@ -41,7 +42,7 @@ button.toc-header {
 ul.toc-content.overflow {
   list-style: none;
   position: relative;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
   padding: 0;
   max-height: calc(100% - 2rem);
   overscroll-behavior: contain;
